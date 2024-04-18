@@ -1,3 +1,26 @@
+from torch.utils.data import DataLoader
+
+
+class CustomDataLoader:
+    """
+    CustomDataLoader is a utility class designed to streamline the usage of PyTorch's DataLoader for
+    handling datasets in deep learning projects. It encapsulates a single DataLoader
+    object and provides methods for convenient iteration over the dataset as well as querying its length.
+    This class simplifies the process of data loading and batching,
+    making it easier to integrate datasets into PyTorch models and training loops.
+    """
+    def __init__(self, dataset, batch_size, shuffle=True):
+        self.loader = DataLoader(dataset, batch_size=batch_size, shuffle=shuffle)
+
+    def __iter__(self):
+        return iter(self.loader)
+
+    def __len__(self):
+        return len(self.loader)
+
+
+
+"""
 from CustomDataset import CustomDataset
 from torch.utils.data import ConcatDataset, DataLoader, Dataset
 
@@ -18,3 +41,4 @@ class CustomDataLoader:
         dataloader: DataLoader = self.construction(batch_size=batch_size)
         length: int = dataloader.__len__()
         return length
+"""
