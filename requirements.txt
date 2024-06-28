@@ -1,0 +1,9 @@
+torch~=2.3.1
+torchvision~=0.18.1
+torchinfo~=1.8.0
+pandas~=2.2.2
+numpy~=1.24.1
+pillow~=10.3.0
+matplotlib~=3.9.0
+wget~=3.2
+tqdm~=4.66.4
