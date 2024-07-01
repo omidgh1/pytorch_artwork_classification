@@ -37,5 +37,3 @@ class CustomImageClassifier(ImageClassifier):
 
         # Postprocess the output data
         return result
-
-# Save this code as custom_handler.py and use it in your model archive.
